@@ -47,7 +47,8 @@ class Network:
             self.Zs.append(z)
         return a
 
-    def back_prop(self, X, Y, batch_size, eta=0.005, alpha=0.9, beta=0.999, epsilon=0.00005, epochs=5, epoch_complete_call=None):
+    def back_prop(self, X, Y, batch_size, eta=0.005, alpha=0.9, beta=0.999, epsilon=0.00005, epochs=5,
+                  epoch_complete_call=None):
         """
         :param X: input values (Numpy array)
         :param Y: output values (Numpy array)
