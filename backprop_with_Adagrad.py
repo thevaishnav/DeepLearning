@@ -26,8 +26,8 @@ class Network:
     def init_parameters(self):
         self.weights = [np.random.randn(i, j) for i, j in zip(self.layers[:-1], self.layers[1:])]
         self.biases = [np.random.randn(1, i) for i in self.layers[1:]]
-        self.GWs = [0, ] * len(self.weights)
-        self.GBs = [0, ] * len(self.biases)
+        self.MWs = [0, ] * len(self.weights)
+        self.MBs = [0, ] * len(self.biases)
 
     def feed_forward(self, X):
         """
@@ -82,7 +82,7 @@ class Network:
             deltaBs.insert(0, eta * np.mean(delta, axis=0))
 
         for i in range(len(self.weights)):
-            self.GWs[i] = self.GWs[i] + (deltaWs[i] ** 2)
-            self.GBs[i] = self.GBs[i] + (deltaBs[i] ** 2)
-            self.weights[i] -= eta * deltaWs[i] / ((self.GWs[i] ** 0.5) + epsilon)
-            self.biases[i] -= eta * deltaBs[i] / ((self.GBs[i] ** 0.5) + epsilon)
+            self.MWs[i] = self.MWs[i] + (deltaWs[i] ** 2)
+            self.MBs[i] = self.MBs[i] + (deltaBs[i] ** 2)
+            self.weights[i] -= eta * deltaWs[i] / ((self.MWs[i] ** 0.5) + epsilon)
+            self.biases[i] -= eta * deltaBs[i] / ((self.MBs[i] ** 0.5) + epsilon)
