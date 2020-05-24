@@ -91,4 +91,4 @@ class Network:
             self.SWs[i] = beta * self.SWs[i] + (1 - beta) * (deltaWs[i] ** 2)
             self.SBs[i] = beta * self.SBs[i] + (1 - beta) * (deltaBs[i] ** 2)
             self.weights[i] -= eta * (self.MWs[i] / ((self.SWs[i] ** 0.5) + epsilon))
-            self.biases[i] -= eta * self.MBs[i] / ((self.SBs[i] ** 0.5) + epsilon)
+            self.biases[i] -= eta * (self.MBs[i] / ((self.SBs[i] ** 0.5) + epsilon))
