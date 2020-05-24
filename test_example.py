@@ -8,7 +8,14 @@ elif optimizer == "RMSProp":
     from .backprop_with_RMSProp import Network
     
 elif optimizer == "Adagrad":
-    from backprop_with_Adagrad import Network
+    from .backprop_with_Adagrad import Network
+    
+elif optimizer == "Adam":
+    from .backprop_with_Adam import Network
+
+elif optimizer == "Adam":
+    from .backprop_with_momentum import Network
+    
 
 def preeprocessing():
     # Create training and testing data.
