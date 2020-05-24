@@ -13,7 +13,7 @@ elif optimizer == "Adagrad":
 elif optimizer == "Adam":
     from .backprop_with_Adam import Network
 
-elif optimizer == "Adam":
+elif optimizer == "Momentum":
     from .backprop_with_momentum import Network
     
 
