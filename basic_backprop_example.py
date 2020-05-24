@@ -1,8 +1,6 @@
 import numpy as np
 
-
 optimizer = None
-
 if optimizer is None:
     from .basic_backprop import Network
     
