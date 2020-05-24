@@ -2,18 +2,23 @@ import numpy as np
 
 optimizer = None
 if optimizer is None:
+    print("Running test without Optimizer")
     from .basic_backprop import Network
     
 elif optimizer == "RMSProp":
+    print("Using RMSProp Optimizer")
     from .backprop_with_RMSProp import Network
     
 elif optimizer == "Adagrad":
+    print("Using Adagrad Optimizer")
     from .backprop_with_Adagrad import Network
     
 elif optimizer == "Adam":
+    print("Using Adam Optimizer")
     from .backprop_with_Adam import Network
 
 elif optimizer == "Momentum":
+    print("Using Backpropagation with Momentum")
     from .backprop_with_momentum import Network
     
 
