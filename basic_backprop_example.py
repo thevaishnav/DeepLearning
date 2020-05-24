@@ -1,5 +1,14 @@
 import numpy as np
 
+
+optimizer = None
+
+if optimizer is None:
+    from .basic_backprop import Network
+    
+elif optimizer == "RMSProp":
+    from .backprop_with_RMSProp import Network
+
 def preeprocessing():
     # Create training and testing data.
     # using a function:
