@@ -6,6 +6,9 @@ if optimizer is None:
     
 elif optimizer == "RMSProp":
     from .backprop_with_RMSProp import Network
+    
+elif optimizer == "Adagrad":
+    from backprop_with_Adagrad import Network
 
 def preeprocessing():
     # Create training and testing data.
