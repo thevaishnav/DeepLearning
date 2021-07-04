@@ -1,6 +1,6 @@
 import numpy as np
 
-optimizer = None
+optimizer = str(input("Enter Optimizer: "))
 if optimizer is None:
     print("Running test without Optimizer")
     from .basic_backprop import Network
@@ -23,13 +23,6 @@ elif optimizer == "Momentum":
     
 
 def preeprocessing():
-    # Create training and testing data.
-    # using a function:
-    # y1 = sin(x1) * cos(x2)
-    # y2 = sin(x1*x2)
-    # y3 = cos(x1*x2)
-    # x1 and x2 are input parameter, y1, y2, y3 are output parameters.
-
     X = np.random.random((5000, 2))     # 5000 total examples (4000 for training 1000 for testing)
     x1, x2 = X[:, 0], X[:, 1]
     x1x2 = x1 * x2
