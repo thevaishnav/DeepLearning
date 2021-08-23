@@ -22,10 +22,11 @@ This means that the input layer has 100 neurons, 1st hidden layer has 80 neurons
 To get the prediction from network for a perticular input call Network.feed_forward(X) function. Where X is the input for which prediction is to be made.
 To train the model on a perticular dataset call Network.back_prop(X, Y, batch_size, eta=0.005, epoch_complete_call=None)
 Parameters for Network.back_prop functions are:
-  X = Training Input
-  Y = Training Labels
-  batch_size = Number of samples in each training batch
-  eta = Learning Rate
-  epoch_complete_call = This is he function which will be called after every epoch to test the accuracy of network
+  * X = Training Input
+  * Y = Training Labels
+  * batch_size = Number of samples in each training batch
+  * eta = Learning Rate
+  * epoch_complete_call = This is he function which will be called after every epoch to test the accuracy of network
   
+ 
  Network will also have other optional parameters which will each currospond to the hyperparameter for that method.
