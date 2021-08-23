@@ -3,10 +3,10 @@
 This project by Vaishnav Chincholkar is an implementation of Deep Learning algorythm in Raw Python using Numpy.
 Run "test_example.py" file with Python 3.
 The program should ask for otimizer, which can be any of the following string:
-  RMSProp
-  Adagrad 
-  Adam
-  Momentum
+  * RMSProp
+  * Adagrad 
+  * Adam
+  * Momentum
  Each corrusponding to one of the algorythm.
  
 To use the Network in individual project, create a Network class variable which would need an input parameter called layers. This parameter can be any type of itterator.
