@@ -12,9 +12,12 @@ The program should ask for otimizer, which can be any of the following string:
  
 To use the Network in individual project, create a Network class variable which would need an input parameter called layers. This parameter can be any type of itterator.
 This parameter will deside the number of neurons in each of the layer in netowrk as well as number of layers in the netowrk.
-Each "int" element in the layers parameter will be interprited as number of neurons in the currosponding layer, for example if the paramere is
+Each "int" element in the layers parameter will be interprited as number of neurons in the currosponding layer, for example if the parameter is
+  
   [100, 80, 50, 10]
+
 This means that the input layer has 100 neurons, 1st hidden layer has 80 neurons, 2nd hidden layer has 50, and output layer will have 10 neurons.
+
 
 To get the prediction from network for a perticular input call Network.feed_forward(X) function. Where X is the input for which prediction is to be made.
 To train the model on a perticular dataset call Network.back_prop(X, Y, batch_size, eta=0.005, epoch_complete_call=None)
